@@ -4,14 +4,98 @@
 
 
 {% block css %}
+
+<Style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem; 
+    background: rgb(181,178,221);
+    background: radial-gradient(circle, rgba(181,178,221,1) 0%, rgba(115,209,208,1) 20%, rgba(216,116,219,1) 40%, rgba(158,223,179,1) 60%, rgba(208,201,143,0.8995973389355743) 80%, rgba(188,230,232,1) 100%);
+    text-align: center;
+}
+button{
+    border: 1px solid rgb(169, 212, 247);
+    text-decoration: none;
+    padding: 5 rem 1rem;
+    font-family: calibri;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30%;
+    border-radius: 1rem;
+    margin: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: none;
+    height: 3rem; 
+    color: rgb(142, 109, 219);   
+}
+button:hover{
+    background-color: rgb(137, 135, 235);
+    color: rgb(180, 88, 88);
+    border: 1px solid rgb(111, 8, 172);
+}
+.graph{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem; 
+    background-color:white;
+    
+    
+}
+.left, .right{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+</Style>
     
 {% endblock %}
 {% block content %}
-    
-<a class="navbar-brand" href="#">
-    <img src="{% static 'images/1.png' %}" alt="" height="500">
+ 
+<section class="introduction">
+    <h1> Show your Createvity online.</h1>
+    <h2>On all key channels. With just one platform.</h2>
+    <p> you can create, manage, and optimize your online presence across all key channels. From a single platform, you can distribute content to all relevant channels and analyze its success.</p>
+    <button>LET'S Try now </button>
+</section>
 
-</a>
+<section class="graph">
+    <div class="left">
+        <header>
+            <h2>Graph's</h2>
+          <p>quick hit tips & tricks</p>
+          </header>
+          <p>
+           
+          </p>
+          <button>LET'S Try now </button>
+    </div>
+    <div class="right">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/1.png' %}" alt="" height="350">
+        
+        </a>
+    </div>
+  </section>
+
 
 {% endblock %}
 {% block js %}
