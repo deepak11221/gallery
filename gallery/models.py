@@ -1,4 +1,5 @@
 from django.db import models
+from graph.models import graph
 
 # Create your models here.
 
@@ -8,6 +9,7 @@ class category(models.Model):
     description = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    graph = models.ForeignKey(graph, on_delete=models.CASCADE, related_name='categories', blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -22,6 +24,7 @@ class snippet(models.Model):
     description = models.TextField(blank=True, null=True) 
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    graph = models.ForeignKey(graph, on_delete=models.CASCADE, related_name='snippets', blank=True, null=True)
 
     def __str__(self):
         return self.code 

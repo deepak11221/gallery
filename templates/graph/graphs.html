@@ -12,26 +12,29 @@
             <div class="col-md-12">
                 <h1>Graph</h1>
                 <div class="row">
-                    <div class="col-md-6">
+                    
+                    {% for graph in graphs %}
+                    <div class="col-md-4">
                         <div class="card">
-                            <div class="card-header">
-                                <h3>Graph 1</h3>
-                            </div>
+                            <a href="">
+                                <img src="{{graph.logo.url}}" alt="" class="card-img" height="200">
+                            </a>
                             <div class="card-body">
-                                <canvas id="myChart" width="400" height="400"></canvas>
+                                <h3 class="text-center">
+                                    <a href="">
+                                        {{graph.name}}
+                                    </a>
+                                </h3>
+                                <p class="text-small">
+                                    {{graph.description|truncatewords:15}}
+                                </p>
+                                <a href="{% url 'view_graph' graph.id %}" class="btn btn-info btn-sm">View</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Graph 2</h3>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="myChart2" width="400" height="400"></canvas>
-                            </div>
-                        </div>
-                    </div>
+                 
+                    {% endfor %}
+                        
                 </div>
             </div>
         </div>

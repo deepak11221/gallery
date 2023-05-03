@@ -9,6 +9,7 @@ def home_gallery(request):
     ctx = {'categories': categories}
     return render(request, 'gallery/home_gallery.html', ctx)
 
+
 def add_category(request):
     # add person form
     form = category(request.POST or None, request.FILES or None)
@@ -20,7 +21,7 @@ def add_category(request):
         else:
             messages.error(request, 'Error adding your details')
     ctx = {'form': form}
-    return render(request, 'gallery/category.html', ctx)
+    return render(request, 'gallery/add_category.html', ctx)
 
 def add_snippet(request):
     # add person form
@@ -33,18 +34,18 @@ def add_snippet(request):
         else:
             messages.error(request, 'Error adding your details')
     ctx = {'form': form}
-    return render(request, 'gallery/snippet.html', ctx)
+    return render(request, 'gallery/add_snippet.html', ctx)
 
 def view_category(request, id):
     cat = category.objects.get(id=id)
-    snippets = snippet.objects.filter(category=cat)
-    ctx = {'cat': cat, 'snippets': snippets}
-    return render(request, 'gallery/vies_category.html', ctx)
+    Snippets = snippet.objects.filter(category=cat)
+    ctx = {'cat': cat, 'snippets': Snippets}
+    return render(request, 'gallery/view_category.html', ctx)
 
 def view_snippet(request, id):
-    snippet = snippet.objects.get(id=id)
-    ctx = {'snippet': snippet}
-    return render(request, 'gallery/view_snippet.html', ctx)
+    Snippet1 = snippet.objects.get(id=id)
+    ctx1 = {'snippet': Snippet1}
+    return render(request, 'gallery/view_snippet.html', ctx1)
 
 def edit_category(request, id):
     cat = category.objects.get(id=id)

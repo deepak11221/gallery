@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:70vh ;
     margin: .2rem;
     font-size: 2rem;
     padding: 1rem; 
@@ -59,12 +59,25 @@ button:hover{
     
     
 }
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: .2rem;
+    font-size: 2rem;
+    padding: 1rem; 
+    background-color:rgb(203, 224, 233);
+    
+    
+}
 .left, .right{
     width: 50%;
     justify-content: center;
     align-items: center;
     padding: 2rem;
 }
+
 </Style>
     
 {% endblock %}
@@ -76,25 +89,67 @@ button:hover{
     <p> you can create, manage, and optimize your online presence across all key channels. From a single platform, you can distribute content to all relevant channels and analyze its success.</p>
     <button>LET'S Try now </button>
 </section>
-
 <section class="graph">
     <div class="left">
         <header>
             <h2>Graph's</h2>
-          <p>quick hit tips & tricks</p>
+          <p>Build charts your team can actually understand</p>
           </header>
           <p>
-           
+            Start from Observable Plot rather than scratch with plug-and-play code snippets that accelerate your ability to turn complex data into clear, visual stories.
           </p>
           <button>LET'S Try now </button>
+          
     </div>
     <div class="right">
         <a class="navbar-brand" href="#">
-            <img src="{% static 'images/1.png' %}" alt="" height="350">
+            <img src="{% static 'images/s.png' %}" alt="" height="350">
         
         </a>
     </div>
   </section>
+<section class="content">
+    <div class="right">
+        <a class="navbar-brand" href="#">
+            
+            <video src="(% static 'images/video.mp4' %)"> video</video>
+        </a>
+    </div>
+    <div class="left">
+        <header>
+            <h2>CONNECT</h2>
+          <p>Bring multiple data sources into a single view</p>
+          </header>
+          <p>
+            Securely integrate your data from the cloud, database, and local files into one place without installing anything, for anyone. Ever.
+          </p>
+          <button>See data integrations </button>
+    </div>
+  </section>
+  <section class="graph">
+    <div class="left">
+        <header>
+            <h2>ACCELERATE</h2>
+          <p>Make data-driven decisions in fewer meetings</p>
+          </header>
+          <p>
+            Facilitate deeper, more inclusive conversations with cross-functional collaborators and stakeholders, and move projects forward with less back-and-forth.
+          </p>
+          <button >LET'S Try now </button>
+    </div>
+    <div class="right">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/s.png' %}" alt="" height="350">
+        
+        </a>
+    </div>
+  </section>
+  <section class="introduction">
+    <h1> Start growing your visibility today</h1>
+    <h2>Get free 7-day access to all toolkits. Cancel anytime..</h2>
+       <button>LET'S Try now </button>
+</section>
+
 
 
 {% endblock %}
